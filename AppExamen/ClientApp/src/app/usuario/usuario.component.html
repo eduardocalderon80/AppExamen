@@ -1,0 +1,12 @@
+<input type="text" [formControl]="nombreControl" />
+<input type="text" [formControl]="apellidoControl" />
+<input type="text" [formControl]="emailControl" />
+
+<input type="button" (click)="NuevoUsuario()" value="Nuevo usuario" />
+
+<!--ES NECESARIO USAR ESTO AQUI CUANSO SE IMPLEMENTA LA CLASE OBSERVABLE EN EL SERVICIO: | async-->
+<app-listaUsuario *ngFor="let elemento of lstUsuario | async" [oListaUsuario]="elemento">
+
+</app-listaUsuario>
+
+
